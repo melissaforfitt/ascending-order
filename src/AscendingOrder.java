@@ -20,11 +20,23 @@ public class AscendingOrder {
 		
 		if (x > y) {
 			temp = x;
-			y = z;
-			z = y;
+			x = y;
+			y = temp;
 		}
 		
-		System.out.println(x & y & z);
+		if (y > z) {
+			temp = y;
+			y = z;
+			z = temp;
+		}
+		
+		if (x > y) {
+			temp = x;
+			x = y;
+			y = temp;
+		}
+		
+		System.out.println("Order is " + x + " " + y + " " + z);
 		
 	}
 
